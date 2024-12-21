@@ -9,7 +9,7 @@ Welcome to the **Dashboard Application** repository! 🌟 This project is design
 ---
 
 ## 🌐 Live Demo
-Check out the live project here: [Dashboard Application](https://dashboard-app-demo.vercel.app)
+Check out the live project here: [Dashboard Application](https://gyanthakur.github.io/Admin-Dashboard/)
 ![image](https://github.com/user-attachments/assets/aa131ba7-4623-4c8e-92d1-fe5f6cc377a2)
 ![image](https://github.com/user-attachments/assets/8d5a3553-447a-4185-bc44-f96e77bcf399)
 ![image](https://github.com/user-attachments/assets/cffb9aea-28b3-42b8-8301-59b64038c702)
