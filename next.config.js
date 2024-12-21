@@ -1,16 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     // Enables font optimization if you are using Google Fonts or other custom fonts
-    experimental: {
-      fontLoaders: [
-        {
-          loader: '@next/font/google',
-          options: {
-            subsets: ['latin'],
-          },
-        },
-      ],
-    },
+    
   
     // Optional: Enabling React Strict Mode for better error handling in development
     reactStrictMode: true,
