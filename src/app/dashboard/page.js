@@ -6,6 +6,7 @@ import { BsFillPersonCheckFill } from "react-icons/bs";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { LuFolderKanban } from "react-icons/lu";
 import Widget from "@/components/widget";
+// import ChartCard from "@/components/charts/chart-card";
 import ChartCard from "@/components/charts/chart-card";
 import {
   areaChartData,
@@ -26,6 +27,7 @@ import Tasks from "../tasks/page";
 import Kanban from "../kanban/page";
 import { useContext } from "react";
 import { GlobalContext } from "@/context";
+
 
 export default function Dashboard() {
   const { allReportsData, allTasks } = useContext(GlobalContext);

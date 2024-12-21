@@ -11,35 +11,38 @@ export default function Sidebar() {
 
   return (
     <div
-      className={`sm:none duration-200 fixed !z-50 flex min-h-full flex-col bg-white pb-10 shadow-2xl shadow-white/5 transition-all dark:!bg-navy-800 dark:text-white md:!z-50 lg:!z-50 xl:!z-0 
-    ${openSidebar ? "translate-x-0" : "-translate-x-96 xl:translate-x-0"}
-    `}
+      className={`fixed !z-50 flex min-h-full flex-col bg-white pb-10 shadow-2xl shadow-white/5 transition-all dark:!bg-navy-800 dark:text-white
+      ${openSidebar ? "translate-x-0" : "-translate-x-96"} xl:translate-x-0`}
     >
+      {/* Close Button */}
       <span
         onClick={() => setOpenSidebar(false)}
         className="absolute right-4 top-4 block cursor-pointer xl:hidden"
       >
-        <HiX />
+        <HiX size={24} />
       </span>
+
+      {/* Logo Section */}
       <div className="mx-[42px] mt-[50px] flex items-center">
         <div className="ml-1 mt-1 text-[20px] font-bold text-navy-700 dark:text-white">
           ADMIN DASHBOARD
         </div>
       </div>
+
+      {/* Navigation Links */}
       <ul className="mb-auto mt-20 pt-1">
         {routes.map((routeItem, index) => (
-          <Link key={index} href={routeItem.layout}>
-            <div className="relative mb-3 flex hover:cursor-pointer">
-              <li className="my-[3px] flex cursor-pointer items-center px-8">
-                <span className="font-medium text-gray-600">
-                  {routeItem.icon}
-                </span>
-                <p className="leading-1  text-[20px] ml-4 flex font-medium text-gray-600">
-                  {routeItem.name}
-                </p>
-              </li>
-            </div>
-          </Link>
+          <li key={index} className="my-[3px] px-8">
+            <Link
+              href={routeItem.path} // Correctly reference the `path` property
+              className="flex items-center space-x-4 hover:text-navy-700 dark:hover:text-white"
+            >
+              <span>{routeItem.icon}</span>
+              <p className="text-[20px] font-medium text-gray-600 dark:text-gray-300">
+                {routeItem.name}
+              </p>
+            </Link>
+          </li>
         ))}
       </ul>
     </div>
